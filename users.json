@@ -1,0 +1,4 @@
+[
+{"name": "abcd","password": "1234","timezone": "IndianStandardTime(+5:30GMT)","role": "patient"},
+{"name":"xyz","password": "4321","timezone" :"Pacific Standard Time (-7 GMT)","role": "doctor"}
+]

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Appointment Scheduler</title>
+    <!---- CSS ---->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.1.3/lumen/bootstrap.min.css">
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+    <!---- Fonts --->
+    <link href="https://fonts.googleapis.com/css?family=Crimson+Text" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"> 
+     <link rel="stylesheet" href="css/index.css">   
+</head>
+<body>  
+     <!--- Navigation Bar ------>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">HOME <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">FEATURES</a>
+          </li>
+         <li class="nav-item">
+            <a class="nav-link" href="#">ABOUT</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!------- Login ------>
+    <div class='bodyContainer'>
+        <div class='scheduler'>
+            <div class='row'>
+                <div class='col-md-6 container login'>
+                    <div class='loginContent'>
+                        <form class="form-horizontal" method="post">
+                        <fieldset class='row'>
+                            <div class="col form-group">
+                                <div class="col-md-12">
+                                    <label for="UserID" class="controls">NAME
+                                        <span class="req">*</span></label> 
+                                    <input id="name" name="name" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col form-group">
+                                <div class="col-md-12">
+                                    <label for="password" class="controls">PASSWORD 
+                                        <span class="req">*</span></label> 
+                                    <input id="password" name="password" type="password" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col control-group">
+                                <!-- Button -->
+                                <div class="col">
+                                    <a id="loginButton" href="#" class="btn">Login</a> 
+                                </div>
+                            </div>
+                         </fieldset>
+                      </form>
+                    </div>
+                </div><div class='overlay'>Appointment Scheduler</div>
+            </div>
+        </div>
+    </div>
+    <!--- Footer --->
+    <div class='footer-class'>
+         <div class='footer row'>
+            <div class='col'>
+                 <p class='copyright'>&copy; 2018 Saranya Manoharan</p>
+            </div>
+        </div>
+    </div>
+    <!----- JavaScript ---->
+    <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js">
+	</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<!----- User files ----->
+    <script src="js/index.js"></script>
+</body>
+</html>

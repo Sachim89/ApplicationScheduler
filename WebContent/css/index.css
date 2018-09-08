@@ -1,0 +1,130 @@
+body, html{
+    font-family: 'Crimson Text', serif;
+    font-size: 12pt;
+    overflow-x: hidden;
+}
+/*** Navigation bar ***/
+.navbar {
+    color: transparent;
+    font-family: 'Crimson Text', serif;
+    font-size: 16pt;
+    border-bottom: 2px solid black;
+}
+.navbar ul {
+    margin-left: auto;
+    margin-right: 0;
+}
+.navbar li a{
+    text-align: center;
+    display: block;
+    letter-spacing: 5px;
+    margin-left: 50px;
+    color: black;
+}
+.fa{
+    color:black;
+}
+/*** Appointment Scheduler ***/
+.scheduler{
+    text-align: center;
+    overflow: hidden;
+    margin: 90px;
+    min-height: 100%;
+}
+.overlay{
+    font-family: 'Lobster', cursive;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 150pt;
+    color: black;
+    width: 100%;
+    text-align: center;
+    opacity: 0.1;
+    z-index: -100;
+}
+.loginContent{
+    min-width: 100%;
+    padding: 50px;
+    margin-top: 60px;
+    border-radius: 10px;
+}
+label{
+    font-family: 'Crimson Text', serif;
+    font-size: 16pt;
+}
+.btn{
+    font-family: 'Crimson Text', serif;
+    font-size: 12pt;
+    color: black;
+    border: 1px solid;
+    padding: 3px;
+    width: 10pc;
+    border-radius: 0;
+    font-weight: lighter;
+}
+/*** Welcome ***/
+.welcome{
+    font-family: 'Lobster', cursive;
+    position: absolute;
+    font-size: 20pt;
+    color: black;
+    left:0;
+    top:0;
+    transform: translate(5%, 50%);
+    width: 100%;
+    height: 50%;
+    text-align: center;
+    padding: 50px;
+}
+#datepicker{
+    border: 1px solid black;
+    text-align: center;
+    width: auto;
+    position: relative;
+}
+#datetimepicker{
+    border: 1px solid black;
+    text-align: center;
+    width: 50%;
+    position: relative;
+}
+#pickAppt{
+    font-size: 20px;
+    text-align: center;
+    width: 100%;
+    height: auto;
+    right: 0;
+}
+#calender{
+    position: relative;
+    z-index: 1;
+    left: -50px;
+    top: 1px;
+    color: #7B7B7B;
+    width: auto;
+}
+#time{
+    position: relative;
+    z-index: 1;
+    left: -60px;
+    top: 1px;
+    color: #7B7B7B;
+    width: auto;
+}
+.btn{
+    background-color: transparent;
+    border: 2px solid black;
+    border-radius: 20px;
+}
+/*** Footer ***/
+.footer-class{
+    text-align: right;
+    letter-spacing: 1px;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    background-color: white;
+    color: black;
+}
