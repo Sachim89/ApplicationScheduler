@@ -112,13 +112,28 @@ function docAppt(){
 		type: "GET",
 		contentType : "application/json",
 		success : function(resultData) {
+			console.log(resultData)
+
 			var data = JSON.parse(resultData);
 			var tr;
 			$('#apptsTable tbody').remove();
 			tr = $('<tr/>');
-			tr.append("<td>" + data.date + "</td>");
-			tr.append("<td>" + data.time + "</td>");
-			$('table').append(tr);
+			for(i in data) {
+				tr = document.createElement('tr');
+			    td = document.createElement('td');
+			    tn = document.createTextNode(i);
+			    td.appendChild(tn);
+			    tr.appendChild(td);
+			    for(var v = 0; v < data[i].length ; v++){
+			    	td = document.createElement('td');
+			    	tn = document.createTextNode(data[i][v]);
+			    	td.appendChild(tn);	
+			    	tr.appendChild(td);
+			    }
+			    $('table').append(tr);
+			    	 
+			    console.log (i, data[i])
+			}
 		},
 		error : function(data) {
 			console.log(data);
@@ -137,10 +152,10 @@ function logout() {
 				window.location.href = "http://localhost:8080/ApplicationScheduler/index.html"
 			},
 			error : function(data) {
-				if (code == 400) {
+				if (data == 400) {
 					alert("Oops!! Somethings went wrong.. Please try after sometime");
 				}
-				if (code == 500) {
+				if (data == 500) {
 					alert("Oops!! Somethings went wrong.. Please try after sometime");
 				}
 			}

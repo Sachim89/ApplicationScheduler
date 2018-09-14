@@ -27,15 +27,18 @@ public class DoctorController {
 	@GET
 	public Response Apt(@QueryParam("role") String role) throws Exception {
 		String responseObject = "";
-		Doctor docDetails = new Doctor();
+		JSONObject docDetails;
 		
 		docDetails = DoctorService.appointments(role);
-		try {
-			responseObject = mapper.writeValueAsString(docDetails);
-		} catch (JsonProcessingException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+		Iterator<?> keys = docDetails.keys();
+		while(keys.hasNext()) {
+		    String key = (String) keys.next();
+		    org.json.JSONArray results = docDetails.getJSONArray(key);
+		    for(int i = 0 ; i < results.length() ; i++){
+		    	responseObject = responseObject + results.get(i).toString();
+		    }
 		}
-		return Response.status(Status.OK).entity(responseObject).build();
+		
+		return Response.status(Status.OK).entity(docDetails.toString()).build();
 	}
 }

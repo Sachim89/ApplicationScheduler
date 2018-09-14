@@ -68,7 +68,7 @@ public class LoginController {
 	 */
 	@Path("/logout")
 	@GET
-	public Response logout(@QueryParam("id") String id) throws FileNotFoundException, JSONException, IOException, ParseException {
+	public Response logout(@QueryParam("name") String id) throws FileNotFoundException, JSONException, IOException, ParseException {
 		String response = "";
 		try {
 			if (LoginService.userValidation(id)) 

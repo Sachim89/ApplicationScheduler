@@ -19,7 +19,7 @@ import com.ApplicationScheduler.model.Doctor;
  */
 public class DoctorService {
 	
-	static Doctor dr = new Doctor();
+	//static Doctor dr = new Doctor();
 
 	/**
 	 * Reads schedules appointment JSON file.
@@ -30,12 +30,13 @@ public class DoctorService {
 	 * @throws IOException
 	 * @throws JSONException
 	 */
-	public static Doctor appointments(String bookingDetails) throws ParseException, FileNotFoundException, IOException, JSONException {
+	public static JSONObject appointments(String bookingDetails) throws ParseException, FileNotFoundException, IOException, JSONException {
 		
 		JSONObject jsonObject = parseJSONFile("C:/Users/Saranya/workspace/ApplicationScheduler/doctor.json");
 		Iterator<?> keys = jsonObject.keys();
+		return jsonObject;
 		
-		while(keys.hasNext()) {
+	/*	while(keys.hasNext()) {
 		    String key = (String) keys.next();
 		    dr.setDate(key);
 		    JSONArray results = jsonObject.getJSONArray(key);
@@ -45,7 +46,7 @@ public class DoctorService {
 			}
 		    return dr;
 		}
-		return dr;
+		return dr;*/
 			
 	}
 	/**
