@@ -112,8 +112,6 @@ function docAppt(){
 		type: "GET",
 		contentType : "application/json",
 		success : function(resultData) {
-			console.log(resultData)
-
 			var data = JSON.parse(resultData);
 			var tr;
 			$('#apptsTable tbody').remove();
@@ -132,7 +130,7 @@ function docAppt(){
 			    }
 			    $('table').append(tr);
 			    	 
-			    console.log (i, data[i])
+			//    console.log (i, data[i])
 			}
 		},
 		error : function(data) {

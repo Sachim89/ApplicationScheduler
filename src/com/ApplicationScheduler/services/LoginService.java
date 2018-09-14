@@ -71,19 +71,25 @@ public class LoginService {
 	public static boolean userValidation(String id) throws ApplicationSchedulerException, JSONException, FileNotFoundException, IOException, org.json.simple.parser.ParseException{
 		
 		User user = new User();
+		Boolean v = false;
+		
 		String obj = new JSONParser().parse(new FileReader("C:/Users/Saranya/workspace/ApplicationScheduler/users.json")).toString();
 		JSONArray jsonarray = new JSONArray(obj);
     	
 		for(int i=0; i< jsonarray.length(); i++){
 	        org.json.JSONObject val = jsonarray.getJSONObject(i);
 	        String nid = val.getString("name");
-            
-	        if(nid.equals(id)){
-	        	return true;
+            if(nid.equals(id)){
+	        	v = true;
 			} else {
-				throw new ApplicationSchedulerException("User does not exist");
+				v = false;
 			}
 		}
-		return false;
+		if(v){
+			return true;
+		}
+		else{
+			throw new ApplicationSchedulerException("User does not exist");
+		}
 	}
 }
